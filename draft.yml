@@ -1,0 +1,19 @@
+models:
+  Assurance:
+    wording: string:255 nullable
+    description: longtext nullable
+
+  Type:
+    wording: string:255 nullable
+    description: longtext nullable
+
+  Claim:
+    full_name: string:255 nullable
+    email: string:255 nullable
+    contact_1: string:255 nullable
+    contact_2: string:255 nullable
+    place: string:255 nullable
+    date: date nullable
+    description: longtext nullable
+    assurance_id: id foreign
+    type_id: id foreign

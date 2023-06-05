@@ -1,0 +1,18 @@
+created:
+    - database/factories/AssuranceFactory.php
+    - database/factories/TypeFactory.php
+    - database/factories/ClaimFactory.php
+    - database/migrations/2023_06_03_225419_create_assurances_table.php
+    - database/migrations/2023_06_03_225420_create_types_table.php
+    - database/migrations/2023_06_03_225421_create_claims_table.php
+    - app/Models/Assurance.php
+    - app/Models/Type.php
+    - app/Models/Claim.php
+models:
+    Assurance: { wording: 'string:255 nullable', description: 'longtext nullable' }
+    Nature: { wording: 'string:255 nullable', description: 'longtext nullable' }
+    Sinistre: { full_name: 'string:255 nullable', email: 'string:255 nullable', contact_1: 'string:255 nullable', contact_2: 'string:255 nullable', place: 'string:255 nullable', date: 'date nullable', description: 'longtext nullable' }
+    AssuranceSinistre: { assurance_id: 'id foreign', sinistre_id: 'id foreign' }
+    NatureSinistre: { nature_id: 'id foreign', sinistre_id: 'id foreign' }
+    Type: { wording: 'string:255 nullable', description: 'longtext nullable' }
+    Claim: { full_name: 'string:255 nullable', email: 'string:255 nullable', contact_1: 'string:255 nullable', contact_2: 'string:255 nullable', place: 'string:255 nullable', date: 'date nullable', description: 'longtext nullable', assurance_id: 'id foreign', type_id: 'id foreign' }
