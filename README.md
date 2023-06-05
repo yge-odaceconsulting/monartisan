@@ -1,6 +1,6 @@
 # monartisan
 
-# Mon Projet Laravel
+# Mon Projet monartisan
 
 Ce dépôt contient le code source de mon projet Laravel.
 
